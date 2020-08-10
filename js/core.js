@@ -194,6 +194,7 @@ class Paginator {
         }
 
         Array.from(document.getElementsByClassName('paginate')).forEach(elem => {
+            // clone it again
             const kuroon = clone.cloneNode(true);
             elem.appendChild(kuroon);
         });
