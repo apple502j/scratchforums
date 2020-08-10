@@ -5,6 +5,7 @@
         <title>Scratch Forums Index</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="./scratch.css">
+        <script src="./js/index.html.js" type="module"></script>
     </head>
     <body>
         <nav class="navbar">
@@ -21,6 +22,14 @@
                 rel="noreferrer noopener"
                 targt="_blank"
             >ScratchDB</a> designed by DatOneLefty to search the forums.</p>
+            <p>This website itself is just an API wrapper.</p>
+            <h2>Link Preference</h2>
+            <p>You are currently using <span id="preference">scratchforums URL</span>.</p>
+            <p>Click the button below to change:</p>
+            <p>
+                <button id="change">Use Scratch Website URL</button>
+            </p>
+            <p>Note that this can be overriden by using <code>?surl=true/false</code> parameter.</p>
         </main>
     </body>
 </html>
