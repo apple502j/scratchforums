@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Scratch Forums Index</title>
+        <script defer>
+            const linkElem = document.createElement('link');
+            linkElem.rel = 'stylesheet';
+            const scriptElem = document.createElement('script');
+            scriptElem.type = 'module';
+            if (document.domain === 'localhost') {
+                linkElem.href = './scratch.css';
+                scriptElem.src = './js/404.js';
+            } else {
+                const url = new URL(location.href);
+                url.pathname = '/scratchforums/scratch.css';
+                linkElem.href = url.toString();
+                url.pathname = '/scratchforums/js/404.js';
+                scriptElem.src = url.toString();
+            }
+            document.head.appendChild(linkElem);
+            document.head.appendChild(scriptElem);
+        </script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="./index">Home</a></li>
+                <li><a href="./about">About</a></li>
+                <li><a href="./search">Search</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>404 Not Found</h1>
+            <p>
+                <input id="d1" disabled value="4">
+                <input id="d2" disabled value="0">
+                <input id="d3" disabled value="4">
+                <input id="result" disabled value="Not Found">
+                <button id="try">?</button>
+            </p>
+        </main>
+    </body>
+</html>

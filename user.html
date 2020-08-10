@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Forum User</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./js/user.html.js" type="module"></script>
+        <link rel="stylesheet" href="/scratch.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="./index">Home</a></li>
+                <li><a href="./about">About</a></li>
+                <li><a href="./search">Search</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 class="loading">Loading...</h1>
+            <h2 id="username"></h2>
+            <div id="postcounts"></div>
+            <div class="paginate"></div>
+            <div id="posts"></div>
+            <div class="paginate"></div>
+        </main>
+
+        <!-- POST TEMPLATE -->
+        <template id="posttemplate">
+            <article data-attr_lang="locale">
+                <h2 class="title">
+                    <a
+                        data-attr_href="user"
+                        data-attr_content="username"
+                    ></a> wrote in <a
+                        data-attr_href="forum"
+                        data-attr_content="forumname"
+                    ></a> / <a
+                        data-attr_href="topic"
+                        data-attr_content="topicname"
+                    ></a> at <time
+                        data-attr_datetime="timestamp"
+                        data-attr_content="datetime"
+                    ></time> (ID: <a
+                        data-attr_href="post"
+                        data-attr_content="postid"
+                    ></a>)
+                </h2>
+                <div data-attr_html="content" class="content"></div>
+            </article>
+        </template>
+        <!-- POST TEMPLATE -->
+
+        <!-- PAGNIATOR --->
+        <template id="paginator">
+            <nav>
+                <a data-direction="back">←</a>
+                <span data-content="page"></span>
+                <a data-direction="forward">→</a>
+            </nav>
+        </template>
+        <!-- PAGNIATOR --->
+
+        <!-- FORUM -->
+        <template id="forumitem">
+            <div class="forumitem">
+                <a
+                    data-attr_href="forumurl"
+                    data-attr_content="forumname"
+                ></a>
+                <span data-attr_content="count"></span>
+            </div>
+        </template>
+        <!-- FORUM -->
+    </body>
+</html>
