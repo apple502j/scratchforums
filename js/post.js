@@ -19,17 +19,17 @@ const generatePostFromJSON = resultJSON => {
         clone,
         ['href', 'datetime', 'lang'],
         {
-            user: PostURL.userURL(resultJSON.author),
-            username: resultJSON.author,
+            user: PostURL.userURL(resultJSON.username),
+            username: resultJSON.username,
 
             forum: PostURL.forumURL(FORUM_NAME_MAPPING[resultJSON.topic.category]),
             forumname: resultJSON.topic.category,
 
             topic: PostURL.topicURL(resultJSON.topic.id),
-            topicname: resultJSON.topic.name,
+            topicname: resultJSON.topic.title,
 
-            timestamp: resultJSON.post_time,
-            datetime: new Date(resultJSON.post_time).toLocaleString('en-us'),
+            timestamp: resultJSON.time.posted,
+            datetime: new Date(resultJSON.time.posted).toLocaleString('en-us'),
 
             post: PostURL.postURL(resultJSON.id),
             postid: resultJSON.id,
